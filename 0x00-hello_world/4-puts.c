@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * Print text on standard output with function puts
  */
 
