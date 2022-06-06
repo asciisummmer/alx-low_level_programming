@@ -10,7 +10,7 @@ int main(void)
 
 	for (num_o = 0; num_o <= 9; num_o++)
 	{
-		for (num_t = 0; num_t <= 8; num_t++)
+		for (num_t = 0; num_t <= 9; num_t++)
 		{
 			for (num_th = num_o; num_th <= 9; num_th++)
 			{
@@ -30,5 +30,6 @@ int main(void)
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
