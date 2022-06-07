@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - display alphabet ten 
+ * print_alphabet_x10 - display alphabet ten
  */
 
 void print_alphabet_x10(void)
