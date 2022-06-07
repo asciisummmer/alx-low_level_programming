@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * main - display text
+ * Return: 0
+ */
 
 int main(void)
 {
