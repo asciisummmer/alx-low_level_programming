@@ -18,7 +18,7 @@ void times_table(void)
 			if (num_o * num_t >= 10)
 			{
 
-				if (num_t < 9 && num_t != 0)
+				if (num_t != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -28,7 +28,7 @@ void times_table(void)
 			}
 			else
 			{
-				if (num_t < 9 && num_t != 0)
+				if (num_t != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
