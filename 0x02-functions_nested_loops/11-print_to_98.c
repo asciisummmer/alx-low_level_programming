@@ -8,15 +8,14 @@
 void print_to_98(int n)
 {
 	int increment = 0;
-	int i = 0;
 
 	if (n >= 98)
 		increment = -1;
 	else
 		increment = 1;
-	for (i = n; i != 98; i += increment)
+	for (; n != 98; n += increment)
 	{
-		printf("%d, ", i);
+		printf("%d, ", n);
 	}
 	printf("98\n");
 }
