@@ -2,6 +2,7 @@
 /**
 * _strlen_recursion - return size of string  with recursion
 * @s: string to print
+* Return: return size of string
 */
 
 int _strlen_recursion(char *s)
@@ -14,13 +15,4 @@ int _strlen_recursion(char *s)
 	{
 		return (0);
 	}
-}
-
-int main(void)
-{
-    int n;
-
-    n = _strlen_recursion("Corbin Coleman");
-    printf("%d\n", n);
-    return (0);
 }
