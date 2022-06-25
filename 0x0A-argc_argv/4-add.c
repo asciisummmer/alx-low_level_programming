@@ -1,4 +1,23 @@
 #include "main.h"
+
+/**
+* check_number - check if string is number
+* @str: string to check
+* Return: 0 if is number else 1
+*/
+
+int check_number(char *str)
+{
+	int i = 0;
+
+	for (i = 0; str[i] != '0'; i++)
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (1);
+	}
+	return (0);
+}
+
 /**
 * main - display name program
 * @argc: size of argv
@@ -18,7 +37,7 @@ int main(int argc __attribute__((unused)), char *argv[]__attribute((unused)))
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (argv[i][0] < '0' || argv[i][0] > '9')
+		if (check_number(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
