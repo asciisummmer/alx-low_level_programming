@@ -8,16 +8,28 @@
 
 int main(int argc __attribute__((unused)), char *argv[]__attribute((unused)))
 {
-	long a, b;
-	if (argc != 3)
+	long value, result = 0;
+	int i = 0;
+
+	if (argc == 1)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
+		return (EXIT_FAILURE);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[2]);
-	if (a >= -2147483648 && b >= -2147483648
-	&& a <= 2147483647 && b <= 2147483647)
-		printf("%ld\n", a * b);
+	for (i = 1; i < argc; i++)
+	{
+		if (argv[i][0] < '0' || argv[i][0] > '9')
+		{
+			printf("Error\n");
+			return (1);
+		}
+		value = atoi(argv[i]);
+		if (value >= -2147483648 && value <= 2147483647)
+			result += value;
+		else
+			exit(EXIT_FAILURE);
+		/*(*argv)++;*/
+	}
+	printf("%ld\n", result);
 	return (EXIT_SUCCESS);
 }
