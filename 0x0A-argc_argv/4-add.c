@@ -14,7 +14,7 @@ int main(int argc __attribute__((unused)), char *argv[]__attribute((unused)))
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (EXIT_FAILURE);
+		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
@@ -28,7 +28,6 @@ int main(int argc __attribute__((unused)), char *argv[]__attribute((unused)))
 			result += value;
 		else
 			exit(EXIT_FAILURE);
-		/*(*argv)++;*/
 	}
 	printf("%ld\n", result);
 	return (EXIT_SUCCESS);
