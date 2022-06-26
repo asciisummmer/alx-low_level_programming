@@ -10,7 +10,7 @@ int check_number(char *str)
 {
 	int i = 0;
 
-	for (i = 0; str[i] != '0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] < '0' || str[i] > '9')
 			return (1);
