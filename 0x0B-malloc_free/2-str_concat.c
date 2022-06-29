@@ -6,6 +6,7 @@
 * Return: size of string
 */
 
+
 unsigned int _strlen(char *str)
 {
 	unsigned int size = 0;
@@ -41,4 +42,35 @@ char *_strdup(char *str)
 	for (i = 0; i < size; i++)
 		array_str[i] = str[i];
 	return (array_str);
+}
+
+/**
+* str_concat - concat two strings
+* @s1: string to concat
+* @s2: string to concat
+* Return: new string of s1+s2
+*/
+
+char *str_concat(char *s1, char *s2)
+{
+	unsigned int size = _strlen(s1) + _strlen(s2);
+	unsigned int j, i = 0;
+	char *array_str = NULL;
+
+	if (size == 0)
+		return (NULL);
+	array_str = malloc((sizeof(char)*size) + 1);
+	if (array_str == NULL)
+		return (NULL);
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		array_str[i] = s1[i];
+	}
+	for (j = 0; s2[j] != '\0'; j++, i++)
+	{
+		array_str[i] = s2[j];
+	}
+	array_str[size] = '\0';
+	return (array_str);
+
 }
