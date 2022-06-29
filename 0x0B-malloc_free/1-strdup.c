@@ -29,17 +29,10 @@ unsigned int _strlen(char *str)
 char *_strdup(char *str)
 {
 	unsigned int size = _strlen(str);
-	char *array_str = NULL;
+	char *array_str = malloc(size + 1);
 	unsigned int i = 0;
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	if (size == 0)
-		return (NULL);
-	array_str = malloc((sizeof(char) * size) + 1);
-	if (array_str == NULL)
+	if (str == NULL || size == 0 || array_str == NULL)
 		return (NULL);
 	array_str[size] = '\0';
 	for (i = 0; i < size; i++)
