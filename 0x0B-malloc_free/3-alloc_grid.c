@@ -15,7 +15,7 @@ void free_memory(int **array_int, int height)
 		free(array_int);
 		array_int = NULL;
 	}
-	for(h = 0; h < height; h++)
+	for (h = 0; h < height; h++)
 	{
 		free(array_int[h]);
 		array_int[h] = NULL;
