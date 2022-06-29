@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * create_array - alloc size for array
 * @size: size of array
@@ -6,7 +7,7 @@
 * Return: address memory to array
 */
 
-char *create_array(unsigned int size, char c __attribute__((unused)))
+char *create_array(unsigned int size, char c)
 {
 	char *array = NULL;
 	unsigned int i = 0;
@@ -17,6 +18,6 @@ char *create_array(unsigned int size, char c __attribute__((unused)))
 	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
-		array[i] = 'c';
+		array[i] = c;
 	return (array);
 }
