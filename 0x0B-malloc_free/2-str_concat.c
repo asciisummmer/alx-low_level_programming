@@ -6,7 +6,6 @@
 * Return: size of string
 */
 
-
 unsigned int _strlen(char *str)
 {
 	unsigned int size = 0;
@@ -59,14 +58,14 @@ char *str_concat(char *s1, char *s2)
 
 	if (size == 0)
 		return (NULL);
-	array_str = malloc((sizeof(char)*size) + 1);
+	array_str = malloc((sizeof(char) * size) + 1);
 	if (array_str == NULL)
 		return (NULL);
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1 != NULL && s1[i] != '\0'; i++)
 	{
 		array_str[i] = s1[i];
 	}
-	for (j = 0; s2[j] != '\0'; j++, i++)
+	for (j = 0; s2 != NULL && s2[j] != '\0'; j++, i++)
 	{
 		array_str[i] = s2[j];
 	}
