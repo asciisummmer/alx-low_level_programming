@@ -32,6 +32,11 @@ char *_strdup(char *str)
 	char *array_str = NULL;
 	unsigned int i = 0;
 
+	if (*str == NULL)
+	{
+		array_str = malloc(1);
+		return (array_str);
+	}
 	if (size == 0)
 		return (NULL);
 	array_str = malloc((sizeof(char) * size) + 1);
