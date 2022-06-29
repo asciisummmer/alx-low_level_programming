@@ -10,6 +10,8 @@ void free_memory(int **array_int, int height)
 {
 	int h = 0;
 
+	if (array_int != NULL)
+		return (array_int);
 	if (height == 0)
 	{
 		free(array_int);
