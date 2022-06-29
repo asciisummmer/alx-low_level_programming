@@ -57,7 +57,10 @@ char *str_concat(char *s1, char *s2)
 	char *array_str = NULL;
 
 	if (size == 0)
-		return (NULL);
+	{
+		array_str = malloc(1);
+		return (array_str);
+	}
 	array_str = malloc((sizeof(char) * size) + 1);
 	if (array_str == NULL)
 		return (NULL);
