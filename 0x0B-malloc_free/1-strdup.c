@@ -32,7 +32,7 @@ char *_strdup(char *str)
 	char *array_str = malloc(size + 1);
 	unsigned int i = 0;
 
-	if (str == NULL || size == 0 || array_str == NULL)
+	if (str == NULL || array_str == NULL)
 		return (NULL);
 	array_str[size] = '\0';
 	for (i = 0; i < size; i++)
