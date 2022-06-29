@@ -8,7 +8,7 @@
 
 void free_grid(int **grid, int height)
 {
-	unsigned int size = 0;
+	int size = 0;
 
 	for (size = 0; size < height; size++)
 	{
