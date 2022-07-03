@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-* argstostr - args to string
-* @ac: size of array
-* @av: array of string
-* Return: string of argument
+* _strlen - return size of string
+* @str: string to get lenght
+* Return: size of string
 */
 
 unsigned int _strlen(char *str)
@@ -20,6 +19,13 @@ unsigned int _strlen(char *str)
 	}
 	return (size);
 }
+
+/**
+* argstostr - args to string
+* @ac: size of array
+* @av: array of string
+* Return: string of argument
+*/
 
 char *argstostr(int ac, char **av)
 {
