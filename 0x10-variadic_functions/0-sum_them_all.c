@@ -6,7 +6,6 @@
 * Return: summ of variable argument
 */
 
-
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;

@@ -1,2 +1,2 @@
 # alx-low_level_programming
-learn low level programming.
+Learn how to use variadic functions in c
