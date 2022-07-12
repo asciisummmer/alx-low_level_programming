@@ -15,35 +15,6 @@ void print_name(char *name, void (*f)(char *))
 	}
 	else
 	{
-		f = put_str;
-		f(name);
+		return;
 	}
-}
-
-/**
-* put_str - display string
-* @str: string to print
-* Return: Nothing.
-*/
-
-void put_str(char *str)
-{
-	int i = 0;
-
-	while (str[i])
-	{
-		_putchar(str[i]);
-		i++;
-	}
-}
-
-/**
-* _putchar - display string
-* @c: display one caracter
-* Return: Nothing.
-*/
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
