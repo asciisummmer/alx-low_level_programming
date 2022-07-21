@@ -2,7 +2,7 @@
 
 /**
  * mul - mltiply two integer
- * @a: number 
+ * @a: number
  * @b: number
  * Return:  a x b
  */
