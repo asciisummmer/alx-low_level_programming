@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- *  * factorial - entry point
- *   * @n: input
- *    * Return: Always 0 (Success)
- *     */
+ ** factorial - entry point
+ ** @n: input
+ ** Return: Always 0 (Success)
+ **/
 int factorial(int n)
 {
 	if (n < 0)

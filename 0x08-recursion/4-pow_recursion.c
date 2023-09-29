@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *  * _pow_recursion - Entry point
- *   * @x: input
- *    * @y: input
- *     * Return: Always 0 (Success)
- *      */
+ ** _pow_recursion - Entry point
+ ** @x: input
+ ** @y: input
+ ** Return: Always 0 (Success)
+ **/
 int _pow_recursion(int x, int y)
 {
 	if (y < 0)
