@@ -3,18 +3,17 @@
 #include <stdio.h>
 
 /**
- * _strspn - locate chr in str
- * @s: string for searchl
+ * _strpbrk - find first occurence of s in accept
+ * @s: string for search
  * @accept: character to find
  *
- * Return: indice of chr
+ * Return: first occurence of s if occurence of s in accept. NULL otherwise.
 **/
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i, j = 0;
 	int accept_chr = 0;
-	unsigned int size = 0;
 
 	for (i = 0; *(s + i); i++)
 	{
@@ -27,14 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		if (accept_chr)
-		{
-			accept_chr = 0;
-		}
-		else
-		{
-			size = i;
-			break;
-		}
+			return (&s[i]);
 	}
-	return (size);
+	return (NULL);
 }
