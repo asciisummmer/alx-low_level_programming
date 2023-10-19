@@ -63,7 +63,7 @@ void _putstr(int fd, char *s, int len)
 
 int main(int argc, char __attribute((unused)) * argv[])
 {
-	print_number(argc);
+	print_number(--argc);
 	_putstr(1, "\n", 1);
 	return (EXIT_SUCCESS);
 }
