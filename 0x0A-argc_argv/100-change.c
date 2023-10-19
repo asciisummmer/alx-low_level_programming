@@ -102,7 +102,7 @@ int main(int __attribute__((unused)) argc, char *argv[])
 	{
 		_putstr(1, "0\n", 2);
 		return (0);
-	}	
+	}
 
 
 	cents = _atoi(argv[1]);
