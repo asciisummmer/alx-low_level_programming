@@ -99,7 +99,11 @@ int main(int __attribute__((unused)) argc, char *argv[])
 		return (1);
 	}
 	if (!argv[1] || argv[1][0] == '-')
+	{
 		_putstr(1, "0\n", 2);
+		return (0);
+	}	
+
 
 	cents = _atoi(argv[1]);
 	for (; cents >= 25; cents -= 25)
