@@ -12,6 +12,8 @@ char *_strdup(const char *str)
 	char *s = malloc(_strlen(str) + 1);
 	int i = 0;
 
+	if (s == NULL)
+		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 		s[i] = str[i];
 	s[i] = '\0';
