@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * _strdup -copy of string
+ * _strdup - copy of string
  * @str: data to copy
  *
  * Return: copy of data
