@@ -1,5 +1,5 @@
 #include <stdio.h>
-void print_phrase(void) __attribute__((constructor));
+int print_phrase(void) __attribute__((constructor));
 
 /**
  * print_phrase - print phrase before main
