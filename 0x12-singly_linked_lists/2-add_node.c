@@ -19,6 +19,24 @@ char *_strdup(const char *str)
 }
 
 /**
+ * _strlen - size of string
+ * @s: string to check
+ *
+ * Return: len of string
+ */
+
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	for (i = 0; *(s + i); ++i)
+	{
+
+	}
+	return (i);
+}
+
+/**
  * add_node - add node in head ofsingle linked list
  * @head: head single linked list
  * @str: data to store
