@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * _strdup - copy of string
+ * _strdup -copy of string
  * @str: data to copy
  *
  * Return: copy of data
@@ -12,8 +12,6 @@ char *_strdup(const char *str)
 	char *s = malloc(_strlen(str) + 1);
 	int i = 0;
 
-	if (s == NULL || str == NULL || *str == '\0')
-		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 		s[i] = str[i];
 	s[i] = '\0';
