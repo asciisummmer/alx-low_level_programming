@@ -28,7 +28,7 @@ void print_number(int n)
  * Return: len of string
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i = 0;
 
@@ -81,5 +81,5 @@ size_t print_list(const list_t *h)
 		temp = temp->next;
 	}
 	return (size_node);
-
 }
+

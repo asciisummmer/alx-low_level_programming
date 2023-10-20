@@ -9,32 +9,15 @@
 
 char *_strdup(const char *str)
 {
-	char *s = malloc(sizeof(str));
+	char *s = malloc(_strlen(str) + 1);
 	int i = 0;
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		s[i] = str[i];
 	s[i] = '\0';
 	return (s);
 }
 
-/**
- * _strlen - size of string
- * @s: string to check
- *
- * Return: len of string
- */
-
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	for (i = 0; *(s + i); ++i)
-	{
-
-	}
-	return (i);
-}
 
 /**
  * add_node - add node in head ofsingle linked list
@@ -56,4 +39,3 @@ list_t *add_node(list_t **head, const char *str)
 		*head = node;
 		return (node);
 }
-
