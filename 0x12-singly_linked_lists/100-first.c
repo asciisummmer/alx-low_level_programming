@@ -7,5 +7,6 @@ void print_phrase(void) __attribute__((constructor));
 
 void print_phrase(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my ");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
