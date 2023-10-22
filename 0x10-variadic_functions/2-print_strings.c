@@ -33,7 +33,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 1; i <= n; i++)
 	{
 		value = va_arg(numbers, char *);
-		if (value == NULL || *value == '\0')
+		if (value == NULL)
 			printf("(nil)");
 		else
 			printf("%s", value);
