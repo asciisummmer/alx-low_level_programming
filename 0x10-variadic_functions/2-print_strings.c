@@ -30,20 +30,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *value = NULL;
 
 	va_start(numbers, n);
-	for (i = 1; i < n; i++)
+	for (i = 1; i <= n; i++)
 	{
 		value = va_arg(numbers, char *);
-		if (value == NULL)
-			printf("nil\n");
+		if (value == NULL || *value == '\0')
+			printf("(nil)");
 		else
 			printf("%s", value);
-		if (separator != NULL)
+		if (separator != NULL && (i + 1) <= n)
 			printf("%s", separator);
-	}
-	if (n > 0)
-	{
-		value = va_arg(numbers, char *);
-		printf("%s", value);
 	}
 	va_end(numbers);
 	printf("\n");
