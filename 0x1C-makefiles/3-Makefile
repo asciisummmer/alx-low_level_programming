@@ -7,7 +7,7 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f *~ *.swp $(NAME)
+	rm -f *~ $(NAME)
 
 oclean:
 	rm -f $(OBJ)
