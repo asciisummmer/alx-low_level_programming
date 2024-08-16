@@ -21,10 +21,11 @@ int _atoi(char *s)
 		{
 			find_integer = 1;
 			result += s[i] - 48;
-			result *= 10;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				find_integer = 0;
+			else
+				result *= 10;
 		}
 	}
-	return (result / 10 * sign);
+	return (result * sign);
 }
