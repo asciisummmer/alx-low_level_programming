@@ -15,7 +15,11 @@ void puts_half(char *str)
 	{
 		len++;
 	}
-	for (start = len / 2; str[start] != '\0'; start++)
+	if (len % 2 != 0)
+		start = len - len / 2;
+	else
+		start = len / 2;
+	for (; str[start] != '\0'; start++)
 	{
 		write(1, &str[start], 1);
 	}
