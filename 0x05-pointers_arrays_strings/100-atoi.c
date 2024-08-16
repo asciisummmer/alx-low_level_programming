@@ -19,13 +19,17 @@ int _atoi(char *s)
 			sign *= -1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			find_integer = 1;
-			result += s[i] - 48;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
+			{
+				result *= sign;
+				result += (s[i] - 48) * sign;
 				find_integer = 0;
-			else
+			}	else
+			{
+				result += s[i] - 48;
 				result *= 10;
+			}
 		}
 	}
-	return (result * sign);
+	return (result);
 }
