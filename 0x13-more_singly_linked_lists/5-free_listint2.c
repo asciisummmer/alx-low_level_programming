@@ -7,8 +7,11 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *copy = *head, *tmp = NULL;
+	listint_t *copy = NULL, *tmp = NULL;
 
+	if (head == NULL)
+		return;
+	copy = *head;
 	while (copy != NULL)
 	{
 		tmp = copy;
