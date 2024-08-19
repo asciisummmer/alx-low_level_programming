@@ -9,9 +9,13 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *tmp = *head, *prev_tmp = *head, *new_node = NULL;
+	listint_t *tmp = NULL, *prev_tmp = NULL, *new_node = NULL;
 	unsigned int current_index = 0;
 
+	if (head == NULL)
+		return (NULL);
+	prev_tmp = *head;
+	tmp = *head;
 	while (tmp != NULL)
 	{
 		if (current_index == idx)
