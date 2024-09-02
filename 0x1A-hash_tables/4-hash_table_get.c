@@ -8,7 +8,7 @@
  * Return: value if operation is doing else NULL
 */
 
-Char *hash_table_get(hash_table_t *ht, const char *key)
+char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	int index = 0;
 	hash_node_t *tmp = NULL;
@@ -28,27 +28,5 @@ Char *hash_table_get(hash_table_t *ht, const char *key)
 		}
 		tmp = tmp->next;
 	}
-	return (tmp);
-
-
-}
-
-/**
- * _strcmp - dup string
- * @str1: string one to compare
- * @str2: string two to compare
- *
- * Return: difference betwen character of two string
-*/
-
-int _strcmp(const char *str1, const char *str2)
-{
-	int i = 0;
-
-	for (; str1[i] != '\0'; i++)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-	}
-	return (str1[i] - str2[i]);
+	return (NULL);
 }
