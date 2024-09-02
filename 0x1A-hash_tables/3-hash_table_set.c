@@ -59,6 +59,7 @@ int check_key_update(hash_node_t *head, const char *key, const char *value)
 
 	while (tmp != NULL)
 	{
+		printf("node key = %s value == %s new key == %s value %s\n", tmp->key, tmp->value, key, value);
 		if (_strcmp(tmp->key, key) == 0)
 		{
 			free(tmp->value);
