@@ -8,25 +8,45 @@
  * Return: value if operation is doing else NULL
 */
 
-char *hash_table_get(const hash_table_t *ht, const char *key)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index = 0;
-	hash_node_t *tmp = NULL;
+	hash_node_t *new;
+	char *value_copy;
+	unsigned long int index, i;
 
-	if (ht == NULL || _strlen(key) == 0)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-	index = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
-		return (NULL);
-	tmp = ht->array[index];
 
-	while (tmp != NULL)
+	value_copy = strdup(value);
+	if (value_copy == NULL)
+		return (0);
+
+	index = key_index((const unsigned char *)key, ht->size);
+	for (i = index; ht->array[i]; i++)
 	{
-		if (_strcmp(tmp->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			return (tmp->value);
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
+			return (1);
 		}
-		tmp = tmp->next;
 	}
-	return (NULL);
+
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+	{
+		free(value_copy);
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+	new->value = value_copy;
+	new->next = ht->array[index];
+	ht->array[index] = new;
+
+	return (1);
 }
