@@ -32,6 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (check_key_update(ht->array[index], key, value))
 		{
+			free(node);
 			return (1);
 		}
 		else
@@ -62,7 +63,7 @@ int check_key_update(hash_node_t *head, const char *key, const char *value)
 	{
 		if (_strcmp(tmp->key, key) == 0)
 		{
-			free(tmp->value);
+			/*free(tmp->value);*/
 			tmp->value = _strdup(value);
 			return (1);
 		}
